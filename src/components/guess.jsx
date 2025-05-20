@@ -37,7 +37,7 @@ function Guess({randomCharacter, characterList}) {
                 </select>
                 <button onClick={handleSubmit}>Submit Guess</button>
                 <p>you guessed</p>
-                <DisplayGuessedCharacters guessedCharacters={guessedCharacters}/>
+                <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
                 <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted}/>
             </div>
         </>
