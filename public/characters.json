@@ -1,9 +1,24 @@
 {
   "characters": [
-    "falco",
-    "fox",
-    "marth",
-    "captain falcon",
-    "ganondorf"
+    {
+      "name": "fox",
+      "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/foxiconssbmpng"
+    },
+    {
+      "name": "falco",
+      "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/falcoiconssbmpng"
+    },
+    {
+      "name": "marth",
+      "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/marthiconssbmpng"
+    },
+    {
+      "name": "captain falcon",
+      "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/captainfalconiconssbmpng"
+    },
+    {
+      "name": "ganondorf",
+      "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/ganondorficonssbmpng"
+    }
   ]
 }

@@ -14,10 +14,10 @@ function RandomCharacter() {
         const fetchCharacters = async () => {
             const response = await fetch('/characters.json');
             const data = await response.json();
-            const charactersList = data.characters;
+            const charactersNames = data.characters.map(character => character.name);
 
-            setAvailableCharacters(charactersList);
-            setCharacter(getRandomCharacter(charactersList));
+            setAvailableCharacters(charactersNames);
+            setCharacter(getRandomCharacter(charactersNames));
         };
 
         fetchCharacters();
@@ -27,7 +27,7 @@ function RandomCharacter() {
         <div>
             <Guess
                 randomCharacter={character}
-                characterList={availableCharacters}
+                characterNamesList={availableCharacters}
             />
             {character && <p>answer: {character}</p>}
         </div>

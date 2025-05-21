@@ -1,11 +1,18 @@
-function DisplayGuessedCharacters({ guessedCharacters, randomCharacter }) {
+function DisplayGuessedCharacters({ guessedCharacters, randomCharacter}) {
     return (
         <ul>
             {guessedCharacters.map((character, index) => {
                 const isCorrect = character === randomCharacter;
+                if (isCorrect) {
+                    return (
+                        <li className="text-green-400" key={index}>
+                            {character} - {"correct"}
+                        </li>
+                    );
+                }
                 return (
-                    <li key={index}>
-                        {character} - {isCorrect ? "correct" : "incorrect"}
+                    <li className="text-red-500" key={index}>
+                        {character} - {"incorrect"}
                     </li>
                 );
             })}
