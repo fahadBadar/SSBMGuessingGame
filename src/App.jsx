@@ -5,7 +5,7 @@ import RandomCharacter from "./components/randomCharacter.jsx";
 function App() {
   return (
     <>
-        <h1>Guess the SSBM character</h1>
+        <h1 className="font-['SSBMFont']">Guess the SSBM character</h1>
     </>
   )
 }
