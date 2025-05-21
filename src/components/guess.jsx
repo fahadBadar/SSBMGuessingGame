@@ -3,7 +3,7 @@ import DisplayGuessedCharacters from "./displayGuessedCharacters.jsx";
 import CheckGuess from "./checkGuess.jsx";
 import '../App.css'
 
-function Guess({randomCharacter, characterNamesList}) {
+function Guess({randomCharacter, characterNamesList, characterIcons}) {
     const [guess, setGuess] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [guessedCharacters, setGuessedCharacters] = useState([]);

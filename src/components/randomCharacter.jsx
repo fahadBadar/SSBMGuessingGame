@@ -9,6 +9,7 @@ const getRandomCharacter = (characters) => {
 function RandomCharacter() {
     const [character, setCharacter] = useState(null);
     const [availableCharacters, setAvailableCharacters] = useState([]);
+    const [characterIcons, setCharacterIcons] = useState([])
 
     useEffect(() => {
         const fetchCharacters = async () => {
@@ -17,6 +18,7 @@ function RandomCharacter() {
             const charactersNames = data.characters.map(character => character.name);
 
             setAvailableCharacters(charactersNames);
+            setCharacterIcons(data.characters.map(character => character.icon));
             setCharacter(getRandomCharacter(charactersNames));
         };
 
@@ -28,6 +30,7 @@ function RandomCharacter() {
             <Guess
                 randomCharacter={character}
                 characterNamesList={availableCharacters}
+                characterIcons={characterIcons}
             />
             {character && <p>answer: {character}</p>}
         </div>
