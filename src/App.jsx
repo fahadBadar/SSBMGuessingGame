@@ -1,6 +1,4 @@
 import './App.css'
-import Guess from './components/guess.jsx'
-import RandomCharacter from "./components/randomCharacter.jsx";
 
 function App() {
   return (

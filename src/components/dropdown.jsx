@@ -58,7 +58,6 @@ function Dropdown({
                 </button>
                 <button
                     onClick={handleSubmit}
-                    disabled={!selectedCharacter}
                     className="hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"
                 >
                     OK
@@ -67,7 +66,7 @@ function Dropdown({
 
 
             {isOpen && (
-                <div aria-label="Dropdown menu" className='absolute bg-black max-h-52 w-50 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
+                <div aria-label="Dropdown menu" className='absolute bg-black max-h-52 w-60 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
                     <ul
                         role="menu"
                         aria-labelledby={id}

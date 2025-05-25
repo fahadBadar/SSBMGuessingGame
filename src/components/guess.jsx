@@ -22,14 +22,13 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
         if (guess) { 
             setIsSubmitted(true);
             addToGuessedCharacters(guess);
-            setGuess("");
+            setGuess(guess);
         }
     }
 
-
     return (
         <>
-            <div className="flex justify-center card text-yellow-400 font-['SSBMFont'] ">
+            <div className="flex m-1 justify-center card text-yellow-400 font-['SSBMFont'] ">
                 <Dropdown
                     id = "characters"
                     title = "select your character"
