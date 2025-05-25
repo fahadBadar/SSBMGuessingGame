@@ -5,7 +5,6 @@ function Dropdown({
                       id,
                       title = "select your character",
                       characterData,
-                      position = "bottom-left",
                       hasImage,
                       selectedCharacterName,
                       style,
@@ -41,18 +40,6 @@ function Dropdown({
         handler: () => setIsOpen(false),
         isOpen,
     })
-
-    const positionClasses = {
-        'bottom-right': 'top-full right-0 mt-2',
-        'bottom-left': 'top-full left-0 mt-2',
-        'top-right': 'bottom-full right-0 mb-2',
-        'top-left': 'bottom-full left-0 mb-2',
-    };
-
-    const dropdownClass =
-        'absolute bg-gray-100 w-max max-h-52 overflow-y-auto py-3 rounded shadow-md z-10 ' +
-        (positionClasses[position] || '');
-
     return (
         <div ref={dropdownRef} className="relative">
             <div className={ 'flex justify-between items-center '}>
@@ -64,7 +51,7 @@ function Dropdown({
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
                     className={
-                        'flex justify-between items-center gap-5 w-full py-2 px-4 hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12' +
+                        'flex justify-between items-center gap-5 w-50 py-2 px-4 hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12' +
                         (style ? ` ${style}` : '')
                     }
                 >
@@ -81,7 +68,7 @@ function Dropdown({
 
 
             {isOpen && (
-                <div aria-label="Dropdown menu" className={dropdownClass}>
+                <div aria-label="Dropdown menu" className='absolute bg-black max-h-52 w-50 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
                     <ul
                         role="menu"
                         aria-labelledby={id}
@@ -93,7 +80,7 @@ function Dropdown({
                                 'flex items-center cursor-pointer hover:bg-gray-200 px-3';
 
                             if (selectedCharacter?.name === item.name) {
-                                liClass += ' bg-gray-300';
+                                liClass += ' bg-yellow-400 text-black';
                             }
 
                             return (
@@ -103,7 +90,7 @@ function Dropdown({
                                             src={item.icon}
                                             alt="image"
                                             loading="lazy"
-                                            className="w-8 h-8 rounded-full bg-gray-400 object-cover me-2"
+                                            className="w-8 h-8 bg-gray-400 object-cover me-2"
                                         />
                                     )}
                                     <span>{item.name}</span>
