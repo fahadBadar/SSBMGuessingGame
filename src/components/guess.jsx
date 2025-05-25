@@ -10,22 +10,18 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
     const [guessedCharacters, setGuessedCharacters] = useState([]);
     console.log(JSON.stringify(characterNamesList));
 
+    const availableCharacterData = characterData.filter(
+        character => !guessedCharacters.includes(character.name)
+    );
+
     const addToGuessedCharacters = (guess) => {
         setGuessedCharacters([...guessedCharacters, guess]);
-    }
-
-    function removeGuessCharacterFromlist(guess, characterNamesList) {
-        const index = characterNamesList.indexOf(guess);
-        if (index !== -1) {
-            characterNamesList.splice(index, 1);
-        }
     }
 
     const handleSubmit = (guess) => {
         if (guess) { 
             setIsSubmitted(true);
             addToGuessedCharacters(guess);
-            removeGuessCharacterFromlist(guess, characterNamesList);
             setGuess("");
         }
     }
@@ -37,7 +33,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                 <Dropdown
                     id = "characters"
                     title = "select your character"
-                    characterData = {characterData}
+                    characterData = {availableCharacterData}
                     hasImage = {true}
                     onSubmit={handleSubmit} />
             </div>
