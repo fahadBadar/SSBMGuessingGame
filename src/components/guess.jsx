@@ -10,11 +10,6 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
     const [guessedCharacters, setGuessedCharacters] = useState([]);
     console.log(JSON.stringify(characterNamesList));
 
-    const handleGuessChange = (event) => {
-        setGuess(event.target.value);
-        setIsSubmitted(false);
-    }
-
     const addToGuessedCharacters = (guess) => {
         setGuessedCharacters([...guessedCharacters, guess]);
     }
