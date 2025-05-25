@@ -38,7 +38,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                     onSubmit={handleSubmit} />
             </div>
             <div className="grid justify-center card text-yellow-400 font-['SSBMFont'] ">
-                <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
+                <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
                 <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} />
             </div>
         </>

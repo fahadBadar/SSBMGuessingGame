@@ -28,7 +28,6 @@ function Dropdown({
         }
     }
 
-
     useEffect(() => {
      const newSelectedCharacter = characterData?.find((character) => character.name === selectedCharacterName);
      setSelectedCharacter(newSelectedCharacter || undefined);
@@ -90,7 +89,7 @@ function Dropdown({
                                             src={item.icon}
                                             alt="image"
                                             loading="lazy"
-                                            className="w-8 h-8 bg-gray-400 object-cover me-2"
+                                            className="w-8 h-8 object-cover me-2"
                                         />
                                     )}
                                     <span>{item.name}</span>
