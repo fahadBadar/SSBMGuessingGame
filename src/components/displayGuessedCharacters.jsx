@@ -16,14 +16,19 @@ function DisplayGuessedCharacters({ guessedCharacters, randomCharacter, characte
                                 className="w-16 h-16 object-cover"
                             />
                         )}
-                        <div className={`flex items-center justify-center w-16 h-16 text-white border-2 ${isCorrect ? "bg-green-400" : "bg-red-500"} `}>
+                        <div className={`flex items-center justify-center w-16 h-16 text-white border-2 ${isCorrect ? "bg-green-500" : "bg-red-500"} `}>
                             <div className={'text-xs text-center'}>
                                 {isCorrect ? "correct" : "incorrect"}
                             </div>
                         </div>
-                        <div className={`flex items-center justify-center w-16 h-16 text-white border-2 ${characterInfo.gender === randomCharacterInfo.gender ? "bg-green-400" : "bg-red-500"} `}>
+                        <div className={`flex items-center justify-center w-16 h-16 text-white border-2 ${characterInfo.gender === randomCharacterInfo.gender ? "bg-green-500" : "bg-red-500"} `}>
                             <div className={'text-xs text-center'}>
                                 {characterInfo.gender}
+                            </div>
+                        </div>
+                        <div className={`flex items-center justify-center w-16 h-16 text-white border-2 ${characterInfo.tier === randomCharacterInfo.tier ? "bg-green-500" : "bg-red-500"} `}>
+                            <div className={'text-xs text-center'}>
+                                {characterInfo.tier}
                             </div>
                         </div>
                     </li>

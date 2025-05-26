@@ -3,37 +3,44 @@
     {
       "name": "Fox",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/foxiconssbmpng",
-      "gender": "Male"
+      "gender": "Male",
+      "tier": "S"
     },
     {
       "name": "Falco",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/falcoiconssbmpng",
-      "gender": "Male"
+      "gender": "Male",
+      "tier": "S"
     },
     {
       "name": "Marth",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/marthiconssbmpng",
-      "gender": "Male"
+      "gender": "Male",
+      "tier": "S"
     },
     {
       "name": "Captain Falcon",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/captainfalconiconssbmpng",
-      "gender": "Male"
+      "gender": "Male",
+      "tier": "A"
     },
     {
       "name": "Ganondorf",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/ganondorficonssbmpng",
-      "gender": "Male"
+      "gender": "Male",
+      "tier": "C"
     },
     {
       "name": "Sheik",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/sheikiconssbmpng",
-      "gender": "Female"
+      "gender": "Female",
+      "tier": "A"
     },
     {
       "name": "Peach",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/peachiconssbmpng",
-      "gender":"Female"
+      "gender": "Female",
+      "tier": "A"
     }
   ]
 }
