@@ -1,7 +1,7 @@
 function DisplayGuessedCharacters({guessedCharacters, randomCharacter, characterData}) {
     return (
         <>
-            {guessedCharacters.length === 1 && <div className={'w-full flex gap-2 text-white text-xs my-2'}>
+            {guessedCharacters.length >= 1 && <div className={'w-full flex gap-2 text-white text-xs my-2'}>
                 <span className="w-16 border-b">
                     Character
                 </span>

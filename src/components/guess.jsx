@@ -2,6 +2,7 @@ import {useState} from 'react';
 import DisplayGuessedCharacters from "./displayGuessedCharacters.jsx";
 import CheckGuess from "./checkGuess.jsx";
 import Dropdown from "./dropdown.jsx";
+import CharacterRoster from "./characterRoster.jsx";
 import '../App.css'
 
 function Guess({randomCharacter, characterNamesList, characterData}) {
@@ -38,7 +39,10 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
             </div>
             <div className="grid justify-center card text-yellow-400 font-['SSBMFont'] ">
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
+            </div>
+            <div className="grid justify-center card text-yellow-400 font-['SSBMFont'] ">
                 <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} />
+                <CharacterRoster characterdata={characterData}/>
             </div>
         </>
     )
