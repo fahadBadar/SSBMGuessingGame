@@ -8,8 +8,8 @@ function Dropdown({
                       hasImage,
                       selectedCharacterName,
                       style,
-                      onSubmit})
-{
+                      onSubmit
+                  }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const [selectedCharacter, setSelectedCharacter] = useState(
@@ -29,8 +29,8 @@ function Dropdown({
     }
 
     useEffect(() => {
-     const newSelectedCharacter = characterData?.find((character) => character.name === selectedCharacterName);
-     setSelectedCharacter(newSelectedCharacter || undefined);
+        const newSelectedCharacter = characterData?.find((character) => character.name === selectedCharacterName);
+        setSelectedCharacter(newSelectedCharacter || undefined);
     }, [selectedCharacterName, characterData]);
 
     const dropdownRef = useRef();
@@ -41,7 +41,7 @@ function Dropdown({
     })
     return (
         <div ref={dropdownRef} className="relative">
-            <div className={ 'flex justify-between items-center '}>
+            <div className={'flex justify-between items-center '}>
                 <button
                     id={id}
                     aria-label="Toggle dropdown"
@@ -66,7 +66,8 @@ function Dropdown({
 
 
             {isOpen && (
-                <div aria-label="Dropdown menu" className='absolute bg-black max-h-52 w-60 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
+                <div aria-label="Dropdown menu"
+                     className='absolute bg-black max-h-52 w-60 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
                     <ul
                         role="menu"
                         aria-labelledby={id}
@@ -103,4 +104,5 @@ function Dropdown({
     )
 
 }
+
 export default Dropdown;
