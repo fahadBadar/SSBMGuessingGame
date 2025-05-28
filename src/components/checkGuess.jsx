@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-function CheckGuess({ guess, randomCharacter, isSubmitted}) {
+function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -21,8 +21,10 @@ function CheckGuess({ guess, randomCharacter, isSubmitted}) {
                     <div className="bg-black p-16 rounded-lg shadow-lg text-center">
                         <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
                         <button className={"hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>close</button>
+                        <div>
+                            You did it in {guesedCharacters.length} tries!
+                        </div>
                     </div>
-
                 </div>)}
             </div>
         );
