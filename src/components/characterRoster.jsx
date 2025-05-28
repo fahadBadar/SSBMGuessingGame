@@ -3,7 +3,6 @@ function CharacterRoster({ characterdata, guessedCharacters }) {
         <div className="w-160 p-4">
             <div className="flex flex-wrap justify-center">
                 {characterdata.map((character) => (
-
                     <div key={character.name}>
                         <img
                             src={character.icon}
