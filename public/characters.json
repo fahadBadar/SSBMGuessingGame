@@ -4,157 +4,209 @@
       "name": "Fox",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/foxiconssbmpng",
       "gender": "Male",
-      "tier": "S"
+      "tier": "S",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Star Fox"
     },
     {
       "name": "Falco",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/falcoiconssbmpng",
       "gender": "Male",
-      "tier": "S"
+      "tier": "S",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Star Fox"
     },
     {
       "name": "Marth",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/marthiconssbmpng",
       "gender": "Male",
-      "tier": "S"
+      "tier": "S",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Fire Emblem"
     },
     {
       "name": "Sheik",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/sheikiconssbmpng",
       "gender": "Female",
-      "tier": "S"
+      "tier": "S",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "The Legend of Zelda"
     },
     {
       "name": "Jigglypuff",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/jigglypufficonssbmpng",
       "gender": "Female",
-      "tier": "S"
+      "tier": "S",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Pokémon"
     },
     {
       "name": "Captain Falcon",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/captainfalconiconssbmpng",
       "gender": "Male",
-      "tier": "A"
+      "tier": "A",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "F-Zero"
     },
     {
       "name": "Peach",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/peachiconssbmpng",
       "gender": "Female",
-      "tier": "A"
+      "tier": "A",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Mario"
     },
     {
       "name": "Ice Climbers",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/iceclimbersiconssbmpng",
       "gender": "Other",
-      "tier": "A"
+      "tier": "A",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Ice Climber"
     },
     {
       "name": "Yoshi",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/yoshiiconssbmpng",
       "gender": "Male",
-      "tier": "A"
+      "tier": "A",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Yoshi"
     },
     {
       "name": "Donkey Kong",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/donkeykongiconssbmpng",
       "gender": "Male",
-      "tier": "B"
+      "tier": "B",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Donkey Kong"
     },
     {
       "name": "Pikachu",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/pikachuiconssbmpng",
       "gender": "Male",
-      "tier": "B"
+      "tier": "B",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Pokémon"
     },
     {
       "name": "Samus",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/samusiconssbmpng",
       "gender": "Female",
-      "tier": "B"
+      "tier": "B",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Metroid"
     },
     {
       "name": "Luigi",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/luigiiconssbmpng",
       "gender": "Male",
-      "tier": "B"
+      "tier": "B",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Mario"
     },
     {
       "name": "Dr. Mario",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/drmarioiconssbmpng",
       "gender": "Male",
-      "tier": "B"
+      "tier": "B",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Mario"
     },
     {
       "name": "Link",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/linkiconssbmpng",
       "gender": "Male",
-      "tier": "C"
+      "tier": "C",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "The Legend of Zelda"
     },
     {
       "name": "Ganondorf",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/ganondorficonssbmpng",
       "gender": "Male",
-      "tier": "C"
+      "tier": "C",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "The Legend of Zelda"
     },
     {
       "name": "Young Link",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/younglinkiconssbmpng",
       "gender": "Male",
-      "tier": "C"
+      "tier": "C",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "The Legend of Zelda"
     },
     {
       "name": "Mario",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/marioiconssbmpng",
       "gender": "Male",
-      "tier": "C"
+      "tier": "C",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Mario"
     },
     {
       "name": "Roy",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/royiconssbmpng",
       "gender": "Male",
-      "tier": "D"
+      "tier": "D",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Fire Emblem"
     },
     {
       "name": "Mr. Game & Watch",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/mrgameandwatchiconssbmpng",
       "gender": "Male",
-      "tier": "D"
+      "tier": "D",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Game & Watch"
     },
     {
       "name": "Mewtwo",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/mewtwoiconssbmpng",
       "gender": "Male",
-      "tier": "E"
+      "tier": "E",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Pokémon"
     },
     {
       "name": "Zelda",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/zeldaiconssbmpng",
       "gender": "Female",
-      "tier": "E"
+      "tier": "E",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "The Legend of Zelda"
     },
     {
       "name": "Ness",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/nessiconssbmpng",
       "gender": "Male",
-      "tier": "E"
+      "tier": "E",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "EarthBound"
     },
     {
       "name": "Pichu",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/pichuiconssbmpng",
       "gender": "Male",
-      "tier": "E"
+      "tier": "E",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Pokémon"
     },
     {
       "name": "Bowser",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/bowsericonssbmpng",
       "gender": "Male",
-      "tier": "F"
+      "tier": "F",
+      "gameIntroduced": "Super Smash Bros. Melee",
+      "universe": "Mario"
     },
     {
       "name": "Kirby",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/kirbyiconssbmpng",
       "gender": "Other",
-      "tier": "F"
+      "tier": "F",
+      "gameIntroduced": "Super Smash Bros.",
+      "universe": "Kirby"
     }
   ]
 }
