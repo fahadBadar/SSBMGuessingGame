@@ -1,4 +1,5 @@
 import ComparisonCell from "./comparisonCell.jsx";
+import DisplayGuessedCharacterCategoryHeaders from "./displayGuessedCharacterCategoryHeaders.jsx";
 
 function DisplayGuessedCharacters({guessedCharacters, randomCharacter, characterData}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
@@ -16,26 +17,8 @@ function DisplayGuessedCharacters({guessedCharacters, randomCharacter, character
 
     return (
         <>
-            {guessedCharacters.length >= 1 && <div className={'w-full flex gap-2 text-white text-xs my-2'}>
-                <span className="w-16 border-b">
-                    Character
-                </span>
-                <span className="w-16 text-center border-b">
-                    Status
-                </span>
-                <span className="w-16 text-center border-b">
-                    Gender
-                </span>
-                <span className="w-16 text-center border-b">
-                    Tier
-                </span>
-                <span className="w-16 text-center border-b">
-                    Introduced
-                </span>
-                <span className="w-16 text-center border-b">
-                    Universe
-                </span>
-            </div>}
+            {guessedCharacters.length >= 1 &&
+                <DisplayGuessedCharacterCategoryHeaders/>}
             <ul className={'w-full flex flex-col gap-2'}>
                 {guessedCharacters.map((character, index) => {
                     const characterInfo = characterData.find(c => c.name === character);
