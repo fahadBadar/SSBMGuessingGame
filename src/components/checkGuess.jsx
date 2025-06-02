@@ -20,10 +20,10 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
                 {isOpen &&(<div className="fixed inset-0 flex items-center justify-center  z-50">
                     <div className="bg-black p-16 rounded-lg shadow-lg text-center">
                         <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
-                        <button className={"hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>close</button>
                         <div>
                             You did it in {guesedCharacters.length} tries!
                         </div>
+                        <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>close</button>
                     </div>
                 </div>)}
             </div>
