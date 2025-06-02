@@ -3,8 +3,8 @@ import DisplayGuessedCharacterCategoryHeaders from "./displayGuessedCharacterCat
 
 function DisplayGuessedCharacters({guessedCharacters, randomCharacter, characterData}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
-        { value: characterInfo === randomCharacter ? "correct" : "incorrect",
-            isMatch: characterInfo === randomCharacter },
+        { value: characterInfo.name === randomCharacter ? 'correct' : 'incorrect',
+            isMatch: characterInfo.name === randomCharacter },
         { value: characterInfo.gender,
             isMatch: characterInfo.gender === randomCharacterInfo.gender },
         { value: characterInfo.tier,
