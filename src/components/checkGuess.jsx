@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import Statistics from "./Statistics";
 function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,6 +24,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
                         <div>
                             You did it in {guesedCharacters.length} tries!
                         </div>
+                        <Statistics/>
                         <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>close</button>
                     </div>
                 </div>)}
