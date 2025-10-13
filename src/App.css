@@ -13,3 +13,9 @@
   padding: 2rem;
   text-align: center;
 }
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Statistics from "./Statistics";
-function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
+function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -22,10 +22,10 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guesedCharacters}) {
                     <div className="bg-black p-16 rounded-lg shadow-lg text-center">
                         <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
                         <div>
-                            You did it in {guesedCharacters.length} tries!
+                            You did it in {guessedCharacters.length} tries!
                         </div>
-                        <Statistics/>
-                        <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>close</button>
+                        <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
+                        <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>Close</button>
                     </div>
                 </div>)}
             </div>
