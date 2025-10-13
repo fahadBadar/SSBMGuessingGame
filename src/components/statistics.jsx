@@ -14,6 +14,17 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
 
     let stats = "Smashdle xx/xx/xx\nTIME XX:XX\nhttps://url.placeholder\n";
 
+
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(stats);
+            console.log('Stats copied to clipboard');
+        } catch (err) {
+            console.error('Failed to copy stats:', err);
+        }
+    };
+
+
     return(
         <>
         {
@@ -23,11 +34,13 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
                 const comparisons = getComparison(characterInfo, randomCharacterInfo);
 
                 comparisons.forEach((comparison) => {
-                    stats += comparison.isMatch ? "✅" : "🟥";
+                    stats += comparison.isMatch ? "🟩" : "🟥";
                 });
                 stats += "\n";
                 console.log(stats);
             })
+
+
         }
             <div>
                 <textarea 
@@ -37,6 +50,8 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
                     style={{ whiteSpace: 'pre-line' }}
                 />
             </div>
+
+            <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleCopy}>Copy</button>
         </>
     )
 }
