@@ -25,7 +25,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
                             You did it in {guessedCharacters.length} tries!
                         </div>
                         <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
-                        <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>Close</button>
+                        <button className={"m-2 rounded-lg hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleClose}>Close</button>
                     </div>
                 </div>)}
             </div>

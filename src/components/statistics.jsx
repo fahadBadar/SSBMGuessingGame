@@ -51,7 +51,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
                 />
             </div>
 
-            <button className={"hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleCopy}>Copy</button>
+            <button className={"m-2 rounded-lg hover:border-yellow-400 border-2 mt-10 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"} onClick={handleCopy}>Copy</button>
         </>
     )
 }
