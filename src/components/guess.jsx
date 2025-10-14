@@ -29,7 +29,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
 
     return (
         <>
-            <div className="flex m-1 justify-center card text-yellow-400 font-['SSBMFont'] ">
+            <div className="flex m-1 justify-center card text-gray-200 font-['SSBMFont'] ">
                 {guess !== randomCharacter && <Dropdown
                     id = "characters"
                     title = "select your character"
@@ -37,10 +37,10 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                     hasImage = {true}
                     onSubmit={handleSubmit} />}
             </div>
-            <div className="grid justify-center card text-yellow-400 font-['SSBMFont'] ">
+            <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
             </div>
-            <div className="grid justify-center card text-yellow-400 font-['SSBMFont'] ">
+            <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
                 <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData}/>
                 <CharacterRoster characterdata={characterData} guessedCharacters={guessedCharacters}/>
             </div>

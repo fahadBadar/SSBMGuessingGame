@@ -50,7 +50,7 @@ function Dropdown({
                     type="button"
                     onClick={() => setIsOpen(!isOpen)}
                     className={
-                        'flex rounded-l-lg justify-between items-center gap-5 w-50 py-2 px-4 hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12' +
+                        'flex rounded-l-lg justify-between items-center gap-5 w-50 py-2 px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
                         (style ? ` ${style}` : '')
                     }
                 >
@@ -58,7 +58,7 @@ function Dropdown({
                 </button>
                 <button
                     onClick={handleSubmit}
-                    className="rounded-r-lg hover:border-yellow-400 border-2 p-2.5 bg-black hover:bg-yellow-400 hover:text-black h-12"
+                    className="rounded-r-lg hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"
                 >
                     OK
                 </button>
@@ -76,7 +76,7 @@ function Dropdown({
                     >
                         {characterData?.map((item) => {
                             let liClass =
-                                'flex items-center cursor-pointer hover:bg-gray-200 px-3';
+                                'flex items-center cursor-pointer hover:bg-gray-600 px-3';
 
                             if (selectedCharacter?.name === item.name) {
                                 liClass += ' bg-yellow-400 text-black';
