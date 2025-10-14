@@ -1,7 +1,5 @@
 function Statistics({characterData, guessedCharacters, randomCharacter}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
-        { value: characterInfo.name === randomCharacter ? 'correct' : 'incorrect',
-            isMatch: characterInfo.name === randomCharacter },
         { value: characterInfo.gender,
             isMatch: characterInfo.gender === randomCharacterInfo.gender },
         { value: characterInfo.tier,
