@@ -3,6 +3,7 @@ import DisplayGuessedCharacters from "./displayGuessedCharacters.jsx";
 import CheckGuess from "./checkGuess.jsx";
 import Dropdown from "./dropdown.jsx";
 import CharacterRoster from "./characterRoster.jsx";
+import Timer from "./timer.jsx";
 import '../App.css'
 
 function Guess({randomCharacter, characterNamesList, characterData}) {
@@ -36,6 +37,9 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                     characterData = {availableCharacterData}
                     hasImage = {true}
                     onSubmit={handleSubmit} />}
+            </div>
+            <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
+                <Timer/>
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
