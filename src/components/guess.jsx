@@ -4,6 +4,7 @@ import CheckGuess from "./checkGuess.jsx";
 import Dropdown from "./dropdown.jsx";
 import CharacterRoster from "./characterRoster.jsx";
 import Timer from "./timer.jsx";
+
 import '../App.css'
 
 function Guess({randomCharacter, characterNamesList, characterData}) {
