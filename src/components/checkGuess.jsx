@@ -18,7 +18,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
     if (guess === randomCharacter) {
         return (
             <div>
-                {isOpen &&(<div className="fixed inset-0 flex items-center justify-center  z-50">
+                {isOpen &&(<div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="bg-black p-16 rounded-lg shadow-lg text-center">
                         <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
                         <div>
