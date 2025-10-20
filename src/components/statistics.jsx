@@ -10,7 +10,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
             isMatch: characterInfo.universe === randomCharacterInfo.universe }
     ];
 
-    let stats = "Smashdle xx/xx/xx\nTIME XX:XX\nhttps://url.placeholder\n";
+    let stats = "SSBMdle xx/xx/xx\nTIME XX:XX\nhttps://url.placeholder\n";
 
 
     const handleCopy = async () => {
