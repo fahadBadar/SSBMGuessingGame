@@ -28,7 +28,7 @@
       "name": "Sheik",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/sheikiconssbmpng",
       "gender": "Female",
-      "tier": "S",
+      "tier": "A",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "The Legend of Zelda"
     },
@@ -60,7 +60,7 @@
       "name": "Ice Climbers",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/iceclimbersiconssbmpng",
       "gender": "Other",
-      "tier": "A",
+      "tier": "B",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "Ice Climber"
     },
@@ -68,7 +68,7 @@
       "name": "Yoshi",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/yoshiiconssbmpng",
       "gender": "Male",
-      "tier": "A",
+      "tier": "B",
       "gameIntroduced": "Super Smash Bros.",
       "universe": "Yoshi"
     },
@@ -76,7 +76,7 @@
       "name": "Donkey Kong",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/donkeykongiconssbmpng",
       "gender": "Male",
-      "tier": "B",
+      "tier": "C",
       "gameIntroduced": "Super Smash Bros.",
       "universe": "Donkey Kong"
     },
@@ -156,7 +156,7 @@
       "name": "Mr. Game & Watch",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/mrgameandwatchiconssbmpng",
       "gender": "Male",
-      "tier": "D",
+      "tier": "C",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "Game & Watch"
     },
@@ -164,7 +164,7 @@
       "name": "Mewtwo",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/mewtwoiconssbmpng",
       "gender": "Male",
-      "tier": "E",
+      "tier": "D",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "Pokémon"
     },
@@ -172,7 +172,7 @@
       "name": "Zelda",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/zeldaiconssbmpng",
       "gender": "Female",
-      "tier": "E",
+      "tier": "D",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "The Legend of Zelda"
     },
@@ -180,7 +180,7 @@
       "name": "Ness",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/nessiconssbmpng",
       "gender": "Male",
-      "tier": "E",
+      "tier": "D",
       "gameIntroduced": "Super Smash Bros.",
       "universe": "EarthBound"
     },
@@ -188,7 +188,7 @@
       "name": "Pichu",
       "icon": "https://tiermaker.com/images/chart/chart/super-smash-bros-melee-2506/pichuiconssbmpng",
       "gender": "Male",
-      "tier": "E",
+      "tier": "D",
       "gameIntroduced": "Super Smash Bros. Melee",
       "universe": "Pokémon"
     },
