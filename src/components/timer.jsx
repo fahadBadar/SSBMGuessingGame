@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-function Timer(){
-    const [seconds, setSecond] = React.useState(0);
+function Timer({seconds, setSecond}) {
 
     function formatSeconds(seconds){
         var minutes = Math.floor(seconds / 60);

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import DisplayGuessedCharacters from "./displayGuessedCharacters.jsx";
 import CheckGuess from "./checkGuess.jsx";
 import Dropdown from "./dropdown.jsx";
@@ -8,6 +8,7 @@ import Timer from "./timer.jsx";
 import '../App.css'
 
 function Guess({randomCharacter, characterNamesList, characterData}) {
+    const [seconds, setSecond] = React.useState(0);
     const [guess, setGuess] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [guessedCharacters, setGuessedCharacters] = useState([]);
@@ -40,7 +41,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                     onSubmit={handleSubmit} />}
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
-                <Timer/>
+                <Timer seconds={seconds} setSecond={setSecond} />
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>

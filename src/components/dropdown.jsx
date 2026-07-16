@@ -31,7 +31,7 @@ function Dropdown({
     useEffect(() => {
         const newSelectedCharacter = characterData?.find((character) => character.name === selectedCharacterName);
         setSelectedCharacter(newSelectedCharacter || undefined);
-    }, [selectedCharacterName, characterData]);
+    }, [selectedCharacterName]);
 
     const dropdownRef = useRef();
     useOutsideClick({
