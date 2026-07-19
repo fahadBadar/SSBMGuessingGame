@@ -47,7 +47,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
-                <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData}/>
+                <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData} time={seconds} />
                 <CharacterRoster characterdata={characterData} guessedCharacters={guessedCharacters}/>
             </div>
         </>

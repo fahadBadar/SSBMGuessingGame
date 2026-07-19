@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Statistics from "./Statistics";
-function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData}) {
+function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -9,6 +9,11 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
         }
     }, [guess, randomCharacter, isSubmitted]);
 
+    function formatSeconds(seconds){
+        var minutes = Math.floor(seconds / 60);
+        var leftoverSeconds = seconds % 60;
+        return `${minutes}:${leftoverSeconds.toString().padStart(2, '0')}`;
+    }
 
     function handleClose() {
         setIsOpen(false);
@@ -22,7 +27,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
                     <div className="bg-black p-16 rounded-lg shadow-lg text-center">
                         <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
                         <div>
-                            You did it in {guessedCharacters.length} tries!
+                            You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
                         </div>
                         <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
                         <button className={"m-2 rounded-lg hover:border-gray-200 border-2 mt-10 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleClose}>Close</button>
