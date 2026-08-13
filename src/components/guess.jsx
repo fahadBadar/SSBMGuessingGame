@@ -12,6 +12,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
     const [guess, setGuess] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [guessedCharacters, setGuessedCharacters] = useState([]);
+    const [isCorrect, setIsCorrect] = useState(false);
     console.log(JSON.stringify(characterNamesList));
 
     const availableCharacterData = characterData.filter(
@@ -22,6 +23,9 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
         setGuessedCharacters([...guessedCharacters, guess]);
     }
 
+    const handleCorrectGuess = () => {
+        setIsCorrect(true);
+    }
     const handleSubmit = (guess) => {
         if (guess) { 
             setIsSubmitted(true);
@@ -41,13 +45,13 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                     onSubmit={handleSubmit} />}
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
-                <Timer seconds={seconds} setSecond={setSecond} />
+                <Timer seconds={seconds} setSecond={setSecond} isCorrect={isCorrect} />
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
                 <DisplayGuessedCharacters guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} characterData={characterData}/>
             </div>
             <div className="grid justify-center card text-gray-200 font-['SSBMFont'] ">
-                <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData} time={seconds} />
+                <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData} time={seconds} handleGuess={handleCorrectGuess}/>
                 <CharacterRoster characterdata={characterData} guessedCharacters={guessedCharacters}/>
             </div>
         </>

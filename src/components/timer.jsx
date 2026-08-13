@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-function Timer({seconds, setSecond}) {
+function Timer({seconds, setSecond, isCorrect}) {
 
     function formatSeconds(seconds){
         var minutes = Math.floor(seconds / 60);
@@ -12,11 +12,13 @@ function Timer({seconds, setSecond}) {
     }
 
     useEffect(() => {
-        const timer = window.setInterval(addSecond,1000)
-        return () => {
-            window.clearInterval(timer);
+        if (!isCorrect) {
+            const timer = window.setInterval(addSecond,1000)
+            return () => {
+                window.clearInterval(timer);
+            }
         }
-    }, []);
+    }, [isCorrect]);
 
     return (
         <>

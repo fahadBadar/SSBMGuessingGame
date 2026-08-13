@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Statistics from "./Statistics";
-function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time}) {
+function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time, handleGuess}) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -21,6 +21,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
     if (!isSubmitted) return null;
 
     if (guess === randomCharacter) {
+            handleGuess();
         return (
             <div>
                 {isOpen &&(<div className="fixed inset-0 flex items-center justify-center z-50">
