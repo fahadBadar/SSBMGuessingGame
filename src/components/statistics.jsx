@@ -1,4 +1,4 @@
-function Statistics({characterData, guessedCharacters, randomCharacter}) {
+function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
         { value: characterInfo.gender,
             isMatch: characterInfo.gender === randomCharacterInfo.gender },
@@ -20,7 +20,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter}) {
     }
 
 
-    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME XX:XX\nhttps://url.placeholder\n";
+    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://url.placeholder\n";
 
 
     const handleCopy = async () => {

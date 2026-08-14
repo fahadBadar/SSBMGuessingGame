@@ -30,7 +30,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
                         <div>
                             You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
                         </div>
-                        <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter}/>
+                        <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} time={formatSeconds(time)} />
                         <button className={"m-2 rounded-lg hover:border-gray-200 border-2 mt-10 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleClose}>Close</button>
                     </div>
                 </div>)}
