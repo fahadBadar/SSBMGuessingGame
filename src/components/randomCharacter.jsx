@@ -6,6 +6,17 @@ const getRandomCharacter = (characters) => {
     return characters[randomIndex];
 };
 
+function getTodaysDate(){
+    const today = new Date();
+    let day  = today.getDate();
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+
+    let todaysDate = `${day}-${month}-${year}`;
+    localStorage.setItem('today', todaysDate);
+    console.log(todaysDate);
+}
+
 function RandomCharacter() {
     const [character, setCharacter] = useState(null);
     const [characterData, setCharacterData] = useState([])
@@ -22,6 +33,7 @@ function RandomCharacter() {
         };
 
         fetchCharacters();
+        getTodaysDate();
     }, []);
 
     return (
