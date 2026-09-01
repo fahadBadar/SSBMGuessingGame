@@ -1,11 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Guess from "./guess.jsx";
 
-const getRandomCharacter = (characters) => {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    return characters[randomIndex];
-};
-
 function getTodaysDate(){
     const today = new Date();
     let day  = today.getDate();
@@ -14,8 +9,16 @@ function getTodaysDate(){
 
     let todaysDate = `${day}-${month}-${year}`;
     localStorage.setItem('today', todaysDate);
-    console.log(todaysDate);
     return todaysDate;
+}
+
+function generateRandomCharacterIndex(today, characters){
+    let dateSeed = 0;
+    for (let i = 0; i <= today.length - 1; i++) {
+        dateSeed += today.charCodeAt(i);
+    }
+    console.log(dateSeed % characters.length);
+    return dateSeed % characters.length;
 }
 
 function RandomCharacter() {
@@ -30,21 +33,22 @@ function RandomCharacter() {
 
             setAvailableCharacters(charactersNames);
             setCharacterData(data.characters);
-            setCharacter(getRandomCharacter(charactersNames));
+
+            const today = getTodaysDate();
+            if (localStorage.getItem('today') !== null || today !== localStorage.getItem('today'))
+            {
+                localStorage.setItem('today', today);
+                let characterIndex = generateRandomCharacterIndex(today, charactersNames);
+                localStorage.setItem('character', charactersNames[characterIndex]);
+                setCharacter(charactersNames[characterIndex]);
+            }
+            else {
+                console.log('DATE IS THE SAME');
+            }
         };
 
         fetchCharacters();
-        const today = getTodaysDate();
 
-        if (localStorage.getItem('today') !== null && today !== localStorage.getItem('today'))
-        {
-            console.log('FLAG');
-            //set the date
-            //set character
-        }
-        else {
-            console.log('DATE IS THE SAME');
-        }
     }, []);
 
     return (
