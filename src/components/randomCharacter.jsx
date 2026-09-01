@@ -15,6 +15,7 @@ function getTodaysDate(){
     let todaysDate = `${day}-${month}-${year}`;
     localStorage.setItem('today', todaysDate);
     console.log(todaysDate);
+    return todaysDate;
 }
 
 function RandomCharacter() {
@@ -33,7 +34,17 @@ function RandomCharacter() {
         };
 
         fetchCharacters();
-        getTodaysDate();
+        const today = getTodaysDate();
+
+        if (localStorage.getItem('today') !== null && today !== localStorage.getItem('today'))
+        {
+            console.log('FLAG');
+            //set the date
+            //set character
+        }
+        else {
+            console.log('DATE IS THE SAME');
+        }
     }, []);
 
     return (
