@@ -21,6 +21,18 @@ function generateRandomCharacterIndex(today, characters){
     return dateSeed % characters.length;
 }
 
+function setRandomCharacter(charactersNames, setCharacter) {
+    const today = getTodaysDate();
+    if (localStorage.getItem('today') !== null || today !== localStorage.getItem('today')) {
+        localStorage.setItem('today', today);
+        let characterIndex = generateRandomCharacterIndex(today, charactersNames);
+        localStorage.setItem('character', charactersNames[characterIndex]);
+        setCharacter(charactersNames[characterIndex]);
+    } else {
+        console.log('DATE IS THE SAME');
+    }
+}
+
 function RandomCharacter() {
     const [character, setCharacter] = useState(null);
     const [characterData, setCharacterData] = useState([])
@@ -33,18 +45,7 @@ function RandomCharacter() {
 
             setAvailableCharacters(charactersNames);
             setCharacterData(data.characters);
-
-            const today = getTodaysDate();
-            if (localStorage.getItem('today') !== null || today !== localStorage.getItem('today'))
-            {
-                localStorage.setItem('today', today);
-                let characterIndex = generateRandomCharacterIndex(today, charactersNames);
-                localStorage.setItem('character', charactersNames[characterIndex]);
-                setCharacter(charactersNames[characterIndex]);
-            }
-            else {
-                console.log('DATE IS THE SAME');
-            }
+            setRandomCharacter(charactersNames, setCharacter);
         };
 
         fetchCharacters();
