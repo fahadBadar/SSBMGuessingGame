@@ -7,9 +7,7 @@ function getTodaysDate(){
     let month = today.getMonth() + 1;
     let year = today.getFullYear();
 
-    let todaysDate = `${day}-${month}-${year}`;
-    localStorage.setItem('today', todaysDate);
-    return todaysDate;
+    return `${day}-${month}-${year}`;
 }
 
 function generateRandomCharacterIndex(today, characters){
@@ -23,13 +21,13 @@ function generateRandomCharacterIndex(today, characters){
 
 function setRandomCharacter(charactersNames, setCharacter) {
     const today = getTodaysDate();
-    if (localStorage.getItem('today') !== null || today !== localStorage.getItem('today')) {
+    if (today !== localStorage.getItem('today')) {
         localStorage.setItem('today', today);
         let characterIndex = generateRandomCharacterIndex(today, charactersNames);
         localStorage.setItem('character', charactersNames[characterIndex]);
         setCharacter(charactersNames[characterIndex]);
-    } else {
-        console.log('DATE IS THE SAME');
+    }else{
+        setCharacter(localStorage.getItem('character'));
     }
 }
 
