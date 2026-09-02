@@ -13,7 +13,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [guessedCharacters, setGuessedCharacters] = useState([]);
     const [isCorrect, setIsCorrect] = useState(false);
-    console.log(JSON.stringify(characterNamesList));
+    console.log(JSON.stringify("sorted" + characterNamesList.sort(function(a, b) {return a.localeCompare(b)})));
 
     const availableCharacterData = characterData.filter(
         character => !guessedCharacters.includes(character.name)
@@ -40,7 +40,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
                 {guess !== randomCharacter && <Dropdown
                     id = "characters"
                     title = "select your character"
-                    characterData = {availableCharacterData}
+                    characterData = {availableCharacterData.sort(function(a, b) {return a.name.localeCompare(b.name)})}
                     hasImage = {true}
                     onSubmit={handleSubmit} />}
             </div>
