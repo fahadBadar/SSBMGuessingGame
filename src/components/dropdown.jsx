@@ -41,7 +41,7 @@ function Dropdown({
     })
     return (
         <div ref={dropdownRef} className="relative">
-            <div className={'flex justify-between items-center '}>
+            <div className={'flex justify-between items-center p-2'}>
                 <button
                     id={id}
                     aria-label="Toggle dropdown"
