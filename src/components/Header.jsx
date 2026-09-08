@@ -1,5 +1,5 @@
 import {Component} from "react";
-import HowToPlay from "./components/howToPlay.jsx";
+import HowToPlay from "./howToPlay.jsx";
 
 export class Header extends Component {
     render() {

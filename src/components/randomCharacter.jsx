@@ -51,7 +51,7 @@ function RandomCharacter() {
     }, []);
 
     return (
-        <div className="border-x-2 border-b-2 border-white">
+        <div>
             <Guess
                 randomCharacter={character}
                 characterNamesList={availableCharacters}
