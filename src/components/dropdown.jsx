@@ -40,28 +40,34 @@ function Dropdown({
         isOpen,
     })
     return (
-        <div ref={dropdownRef} className="relative">
-            <div className={'flex justify-between items-center p-2'}>
-                <button
-                    id={id}
-                    aria-label="Toggle dropdown"
-                    aria-haspopup="true"
-                    aria-expanded={isOpen}
-                    type="button"
-                    onClick={() => setIsOpen(!isOpen)}
-                    className={
-                        'flex rounded-l-lg justify-between items-center gap-5 w-50 py-2 px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
-                        (style ? ` ${style}` : '')
-                    }
-                >
-                    <span>{selectedCharacter?.name || title}</span>
-                </button>
-                <button
-                    onClick={handleSubmit}
-                    className="rounded-r-lg hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"
-                >
-                    OK
-                </button>
+        <div ref={dropdownRef} className="relative w-full">
+            <div className={'flex w-full'}>
+
+                <div className={'flex-grow py-2 pl-2 pr-1'}>
+                    <button
+                        id={id}
+                        aria-label="Toggle dropdown"
+                        aria-haspopup="true"
+                        aria-expanded={isOpen}
+                        type="button"
+                        onClick={() => setIsOpen(!isOpen)}
+                        className={
+                            'rounded-lg items-center py-2 w-full px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
+                            (style ? ` ${style}` : '')
+                        }
+                    >
+                        <span>{selectedCharacter?.name || title}</span>
+                    </button>
+                </div>
+
+                <div className={'py-2 pl-1 pr-2'}>
+                    <button
+                        onClick={handleSubmit}
+                        className="rounded-lg hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12">
+                        OK
+                    </button>
+                </div>
+
             </div>
 
 
