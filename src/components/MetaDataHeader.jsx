@@ -1,4 +1,7 @@
 import {Component} from "react";
+const date = new Date();
+const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 export class MetaDataHeader extends Component {
     render() {
@@ -8,7 +11,7 @@ export class MetaDataHeader extends Component {
                     SSBMdle #X
                 </div>
                 <div className="text-sm text-gray-400">
-                    Todays Day, Todays Date
+                    {dayNames[date.getDay()]}, {monthNames[date.getMonth()] } { date.getDate()}
                 </div>
             </div>
             <div className="bg-white text-black content-center rounded-full px-3 py-1 font-bold">
