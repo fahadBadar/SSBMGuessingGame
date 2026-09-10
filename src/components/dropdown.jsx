@@ -41,7 +41,7 @@ function Dropdown({
     })
     return (
         <div ref={dropdownRef} className="relative w-full">
-            <div className={'flex w-full'}>
+            <div className={'flex'}>
 
                 <div className={'flex-grow py-2 pl-2 pr-1'}>
                     <button
@@ -52,11 +52,14 @@ function Dropdown({
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
                         className={
-                            'rounded-lg items-center py-2 w-full px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
+                            'flex rounded-lg py-2 w-full px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
                             (style ? ` ${style}` : '')
                         }
                     >
-                        <span>{selectedCharacter?.name || title}</span>
+                        <div className={'flex items-center justify-center'}>
+                            <span>{selectedCharacter?.name || title}</span>
+                        </div>
+
                     </button>
                 </div>
 
@@ -73,7 +76,7 @@ function Dropdown({
 
             {isOpen && (
                 <div aria-label="Dropdown menu"
-                     className='absolute bg-black max-h-52 w-60 overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
+                     className='absolute bg-black max-h-52 w-full overflow-y-auto py-3 rounded shadow-md z-10 top-full left-0 mt-2'>
                     <ul
                         role="menu"
                         aria-labelledby={id}
