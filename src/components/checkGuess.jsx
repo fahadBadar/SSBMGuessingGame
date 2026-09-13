@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Statistics from "./Statistics";
 function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time, handleGuess}) {
     const [isOpen, setIsOpen] = useState(false);
+    const randomCharacterData = characterData.find(c => c.name === randomCharacter);
 
     useEffect(() => {
         if (guess === randomCharacter && isSubmitted) {
@@ -16,7 +17,6 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
     }
 
     if (!isSubmitted) return null;
-
     if (guess === randomCharacter) {
             handleGuess();
         return (
@@ -24,14 +24,22 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
                 {isOpen &&(<div className="flex items-center w-full">
                     <div className="bg-black  p-2 rounded-lg ring ring-white shadow-lg m-2 mt-4 text-center w-full">
                         <h1 className="text-white text-6xl font-bold">VICTORY</h1>
-                        <div>
+                        <div className="flex justify-center p-2">
                             <img
-                                src={randomCharacter.icon}
+                                src={randomCharacterData.icon}
                                 alt={randomCharacter}
                             />
-                            <div>
-                                You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
+                            <div className="p-2 content-center">
+                                <div>
+                                    You guessed
+                                </div>
+                                <div className="text-xl font-bold">
+                                    {randomCharacterData.name}
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
                         </div>
                         <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} time={formatSeconds(time)} />
                     </div>
