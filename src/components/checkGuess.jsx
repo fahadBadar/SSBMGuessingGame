@@ -15,26 +15,28 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
         return `${minutes}:${leftoverSeconds.toString().padStart(2, '0')}`;
     }
 
-    function handleClose() {
-        setIsOpen(false);
-    }
     if (!isSubmitted) return null;
 
     if (guess === randomCharacter) {
             handleGuess();
         return (
-            <div>
-                {isOpen &&(<div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="bg-black p-16 rounded-lg shadow-lg text-center">
-                        <h1 className="text-white text-6xl font-bold">VICTORY!</h1>
+            <>
+                {isOpen &&(<div className="flex items-center w-full">
+                    <div className="bg-black  p-2 rounded-lg ring ring-white shadow-lg m-2 mt-4 text-center w-full">
+                        <h1 className="text-white text-6xl font-bold">VICTORY</h1>
                         <div>
-                            You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
+                            <img
+                                src={randomCharacter.icon}
+                                alt={randomCharacter}
+                            />
+                            <div>
+                                You did it in {formatSeconds(time)} and {guessedCharacters.length} tries!
+                            </div>
                         </div>
                         <Statistics characterData={characterData} guessedCharacters={guessedCharacters} randomCharacter={randomCharacter} time={formatSeconds(time)} />
-                        <button className={"m-2 rounded-lg hover:border-gray-200 border-2 mt-10 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleClose}>Close</button>
                     </div>
                 </div>)}
-            </div>
+            </>
         );
     }
 

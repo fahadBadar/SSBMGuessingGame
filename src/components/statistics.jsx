@@ -13,15 +13,13 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
     function getCurrentDate() {
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
         var yyyy = today.getFullYear();
 
         return dd + '/' + mm + '/' + yyyy;
     }
 
-
     let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://url.placeholder\n";
-
 
     const handleCopy = async () => {
         try {
@@ -31,7 +29,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
             console.error('Failed to copy stats:', err);
         }
     };
-
 
     return(
         <>
@@ -47,19 +44,8 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                 stats += "\n";
                 console.log(stats);
             })
-
-
         }
-            <div>
-                <textarea 
-                    className="bg-[#242424] text-white" 
-                    value={stats} 
-                    readOnly={true}
-                    style={{ whiteSpace: 'pre-line' }}
-                />
-            </div>
-
-            <button className={"m-2 rounded-lg hover:border-gray-200 border-2 mt-10 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>Copy</button>
+            <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>Copy Stats</button>
         </>
     )
 }
