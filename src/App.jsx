@@ -11,8 +11,10 @@ function App() {
             <div className="flex-none">
                 <Header/>
             </div>
-            <div className="flex-grow border-x-2 border-b-1 border-white border-b-gray-300">
+            <div className="flex-none border-x-2  border-white ">
                 <MetaDataHeader/>
+            </div>
+            <div className="flex-grow border-x-2 border-b border-b-gray-300 border-white">
                 <RandomCharacter/>
             </div>
             <div className="flex-none">

@@ -51,14 +51,13 @@ function RandomCharacter() {
     }, []);
 
     return (
-        <div>
+        <>
             <Guess
                 randomCharacter={character}
                 characterNamesList={availableCharacters}
                 characterData={characterData}
             />
-            {character && <p>answer: {character}</p>}
-        </div>
+        </>
     );
 }
 

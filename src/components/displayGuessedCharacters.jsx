@@ -24,7 +24,7 @@ function DisplayGuessedCharacters({guessedCharacters, randomCharacter, character
                     const comparisons = getComparison(characterInfo, randomCharacterInfo);
 
                     return (
-                        <li className={`w-full flex gap-2`} key={index}>
+                        <li className={`w-full flex justify-center gap-2`} key={index}>
                             {characterInfo && (
                                 <img
                                     src={characterInfo.icon}

@@ -22,7 +22,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
         return (
             <>
                 {isOpen &&(<div className="flex items-center w-full">
-                    <div className="bg-black  p-2 rounded-lg ring ring-white shadow-lg m-2 mt-4 text-center w-full">
+                    <div className="p-2 m-2 mt-4 text-center w-full h-full">
                         <h1 className="text-white text-6xl font-bold">VICTORY</h1>
                         <div className="flex justify-center p-2">
                             <img
