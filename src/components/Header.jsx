@@ -1,14 +1,9 @@
 import {Component} from "react";
-import HowToPlay from "./howToPlay.jsx";
 
 export class Header extends Component {
     render() {
-        return <div className="grid grid-cols-3 justify-items-stretch border-x-2 border-b-2 border-white">
-            <div className="p-4 justify-self-start content-center text-gray-200 font-['SSBMFont'] z-50">
-                <HowToPlay/>
-            </div>
+        return <div className="grid justify-items-center border-x-2 border-b-2 border-white">
             <h1 className="p-2 justify-self-center text-gray-200 font-['SSBMFont']">SSBMdle</h1>
-            <div className=""></div>
-        </div>;
+        </div>
     }
 }
