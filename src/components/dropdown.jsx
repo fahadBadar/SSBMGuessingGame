@@ -39,6 +39,12 @@ function Dropdown({
         handler: () => setIsOpen(false),
         isOpen,
     })
+
+    let guessButtonClass = 'rounded-lg border-1 p-2.5 bg-neutral-700 text-neutral-400 border-neutral-800 cursor-not-allowed h-12'
+    if (selectedCharacter) {
+        guessButtonClass = 'rounded-lg border-1 p-2.5 bg-red-700 border-red-800 hover:bg-red-800 cursor-pointer h-12'
+    }
+
     return (
         <div ref={dropdownRef} className="relative w-full">
             <div className={'flex'}>
@@ -52,22 +58,22 @@ function Dropdown({
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
                         className={
-                            'flex rounded-lg py-2 w-full px-4 hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
+                            'flex rounded-lg py-2 w-full px-4 hover:border-gray-200 border-1 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
                             (style ? ` ${style}` : '')
                         }
                     >
                         <div className={'flex items-center justify-center'}>
                             <span>{selectedCharacter?.name || title}</span>
                         </div>
-
                     </button>
                 </div>
 
-                <div className={'py-2 pl-1 pr-2'}>
+                <div className={'py-2 pr-2'}>
                     <button
                         onClick={handleSubmit}
-                        className="rounded-lg hover:border-gray-200 border-2 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12">
-                        OK
+                        disabled={!selectedCharacter}
+                        className={guessButtonClass}>
+                        Guess
                     </button>
                 </div>
 
@@ -88,7 +94,7 @@ function Dropdown({
                                 'flex items-center cursor-pointer hover:bg-gray-600 px-3';
 
                             if (selectedCharacter?.name === item.name) {
-                                liClass += ' bg-yellow-400 text-black';
+                                liClass += ' bg-red-700 text-white';
                             }
 
                             return (
