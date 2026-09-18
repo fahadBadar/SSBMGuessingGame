@@ -1,4 +1,5 @@
 import { IoCopyOutline } from "react-icons/io5";
+import {useState} from "react";
 function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
         { value: characterInfo.gender,
@@ -10,6 +11,8 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
         { value: characterInfo.universe,
             isMatch: characterInfo.universe === randomCharacterInfo.universe }
     ];
+    const [copyButtonText, setCopyButtonText] = useState("Copy Stats");
+    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://url.placeholder\n";
 
     function getCurrentDate() {
         var today = new Date();
@@ -20,16 +23,18 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
         return dd + '/' + mm + '/' + yyyy;
     }
 
-    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://url.placeholder\n";
+
 
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(stats);
+            setCopyButtonText("Copied");
             console.log('Stats copied to clipboard');
         } catch (err) {
             console.error('Failed to copy stats:', err);
         }
     };
+
 
     return(
         <>
@@ -50,7 +55,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                 <div className="flex items-center justify-center">
                     <IoCopyOutline />
                     <div className="px-1">
-                        Copy Stats
+                        {copyButtonText}
                     </div>
                 </div>
             </button>
