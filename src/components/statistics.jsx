@@ -1,3 +1,4 @@
+import { IoCopyOutline } from "react-icons/io5";
 function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
     const getComparison = (characterInfo, randomCharacterInfo) => [
         { value: characterInfo.gender,
@@ -45,7 +46,14 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                 console.log(stats);
             })
         }
-            <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>Copy Stats</button>
+            <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full justify-center bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>
+                <div className="flex items-center justify-center">
+                    <IoCopyOutline />
+                    <div className="px-1">
+                        Copy Stats
+                    </div>
+                </div>
+            </button>
         </>
     )
 }
