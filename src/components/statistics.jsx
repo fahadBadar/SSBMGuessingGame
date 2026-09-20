@@ -28,7 +28,8 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(stats);
-            setCopyButtonText("Copied");
+            setCopyButtonText("Copied!");
+            setTimeout(() => { setCopyButtonText("Copy Stats"); }, 1000);
             console.log('Stats copied to clipboard');
         } catch (err) {
             console.error('Failed to copy stats:', err);
