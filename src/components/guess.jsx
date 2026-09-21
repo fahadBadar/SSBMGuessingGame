@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useSaveGameData} from "../hooks/useSaveGameData.jsx";
 import DisplayGuessedCharacters from "./displayGuessedCharacters.jsx";
 import CheckGuess from "./checkGuess.jsx";
 import Dropdown from "./dropdown.jsx";
@@ -7,10 +8,10 @@ import Timer from "./timer.jsx";
 import '../App.css'
 
 function Guess({randomCharacter, characterNamesList, characterData}) {
-    const [seconds, setSecond] = React.useState(0);
+    const [seconds, setSecond] = useSaveGameData("seconds",0);
     const [guess, setGuess] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [guessedCharacters, setGuessedCharacters] = useState([]);
+    const [guessedCharacters, setGuessedCharacters] = useSaveGameData("guessedCharacters",[]);
     const [isCorrect, setIsCorrect] = useState(false);
     console.log(JSON.stringify("sorted" + characterNamesList.sort(function(a, b) {return a.localeCompare(b)})));
 

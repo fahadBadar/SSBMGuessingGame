@@ -23,8 +23,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
         return dd + '/' + mm + '/' + yyyy;
     }
 
-
-
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(stats);
@@ -36,7 +34,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
         }
     };
 
-
     return(
         <>
         {
@@ -44,7 +41,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                 const characterInfo = characterData.find(c => c.name === character);
                 const randomCharacterInfo = characterData.find(c => c.name === randomCharacter);
                 const comparisons = getComparison(characterInfo, randomCharacterInfo);
-
                 comparisons.forEach((comparison) => {
                     stats += comparison.isMatch ? "🟩" : "🟥";
                 });

@@ -1,14 +1,15 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {useSaveGameData} from "../hooks/useSaveGameData.jsx";
 import Statistics from "./Statistics";
 function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time, handleGuess}) {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isCorrect, setIsCorrect] = useSaveGameData("isCorrect",false);
     const randomCharacterData = characterData.find(c => c.name === randomCharacter);
 
     useEffect(() => {
         if (guess === randomCharacter && isSubmitted) {
-            setIsOpen(true);
+            setIsCorrect(true);
         }
-    }, [guess, randomCharacter, isSubmitted]);
+    }, [guess, randomCharacter, isSubmitted, setIsCorrect]);
 
     function formatSeconds(seconds){
         var minutes = Math.floor(seconds / 60);
@@ -21,7 +22,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
             handleGuess();
         return (
             <>
-                {isOpen &&(<div className="flex items-center w-full">
+                {isCorrect &&(<div className="flex items-center w-full">
                     <div className="p-2 m-2 mt-4 text-center w-full h-full">
                         <h1 className="text-white text-6xl font-bold">VICTORY</h1>
                         <div className="flex justify-center p-2">
