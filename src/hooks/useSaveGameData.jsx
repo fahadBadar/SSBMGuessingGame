@@ -12,9 +12,22 @@ export function useSaveGameData(key, defaultValue) {
 
     const[value, setValue] = useState(getInitalValue)
 
+
+
     function setSaveDataValue(newValue) {
-        setValue(newValue);
-        localStorage.setItem(key, JSON.stringify(newValue));
+        setValue(currentValue => {
+            let resolvedValue;
+
+            if (typeof newValue === 'function') {
+                resolvedValue = newValue(currentValue);
+            } else {
+                resolvedValue = newValue;
+            }
+
+            localStorage.setItem(key, JSON.stringify(resolvedValue));
+
+            return resolvedValue;
+        });
     }
     return [value, setSaveDataValue];
 }
