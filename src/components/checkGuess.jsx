@@ -17,8 +17,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
         return `${minutes}:${leftoverSeconds.toString().padStart(2, '0')}`;
     }
 
-    if (!isSubmitted) return null;
-    if (guess === randomCharacter) {
+    if (isCorrect) {
             handleGuess();
         return (
             <>

@@ -37,7 +37,7 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
     return (
         <div className="flex flex-col justify-item-center w-full h-full">
             <div className="flex justify-center text-gray-200 z-10">
-                {guess !== randomCharacter && <Dropdown
+                {!isCorrect && <Dropdown
                     id = "characters"
                     title = "Select your character"
                     characterData = {availableCharacterData.sort(function(a, b) {return a.name.localeCompare(b.name)})}
