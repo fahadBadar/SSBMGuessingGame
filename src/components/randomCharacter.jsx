@@ -52,11 +52,11 @@ function RandomCharacter() {
 
     return (
         <>
-            <Guess
+            {character && <Guess
                 randomCharacter={character}
                 characterNamesList={availableCharacters}
                 characterData={characterData}
-            />
+            />}
         </>
     );
 }
