@@ -25,6 +25,9 @@ function setRandomCharacter(charactersNames, setCharacter) {
         localStorage.setItem('today', today);
         let characterIndex = generateRandomCharacterIndex(today, charactersNames);
         localStorage.setItem('character', charactersNames[characterIndex]);
+        localStorage.removeItem('guessedCharacters');
+        localStorage.removeItem('seconds');
+        localStorage.removeItem('isCorrect');
         setCharacter(charactersNames[characterIndex]);
     }else{
         setCharacter(localStorage.getItem('character'));
