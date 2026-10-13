@@ -5,7 +5,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #212121;
+  background-image:
+          radial-gradient(circle, rgba(255,255,255,0.3) 1.5px, transparent 2px),
+          radial-gradient(circle, rgba(255,255,255,0.3) 1.5px, transparent 2px);
+  background-size: 52px 90px;        /* width x (width * 1.732), rounded */
+  background-position: 0 0, 26px 45px; /* second layer offset by half a tile */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

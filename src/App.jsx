@@ -7,7 +7,7 @@ import {MetaDataHeader} from "./components/MetaDataHeader.jsx";
 function App() {
   return (
     <>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col h-screen bg-[#212121]">
             <div className="flex-none">
                 <Header/>
             </div>
