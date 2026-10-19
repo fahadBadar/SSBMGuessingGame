@@ -12,11 +12,14 @@ export class Footer extends Component {
                 The puzzle resets every day based on your time zone.
                 Make sure to share your result with others. GLHF!
             </div>
-            <div>
-                Made by <a className="text-gray-200 hover:underline" target="_blank" href={"https://github.com/fahadBadar"}>Fahad</a>
+            <div className="flex justify-center gap-x-2">
+                <div>
+                    Made by <a className="text-gray-200 hover:underline" target="_blank" href={"https://github.com/fahadBadar"}>Fahad</a>
+                </div>
+                <div className=" text-pink-600 hover:underline" >
+                    <a target="_blank" href={"https://ko-fi.com/fahadbadar"}> Buy me a coffee!</a>
+                </div>
             </div>
-
-
         </div>
     }
 }
