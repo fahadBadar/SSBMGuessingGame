@@ -2,7 +2,7 @@ import {Component} from "react";
 
 export class Footer extends Component {
     render() {
-        return <div className="border-x-2 border-white p-2 mb-1 text-sm text-gray-400">
+        return <div className="border-x-2 border-white p-2 mb-1 text-sm text-gray-400 bg-[#212121]">
             <div className="text-left text-[12px] font-bold mb-2">
                 WHAT IS SSBMDLE?
             </div>

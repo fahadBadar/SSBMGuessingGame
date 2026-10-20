@@ -21,7 +21,7 @@ function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, ch
             handleGuess();
         return (
             <>
-                {isCorrect &&(<div className="flex items-center w-full">
+                {isCorrect &&(<div className="flex items-center w-full ">
                     <div className="p-2 m-2 mt-4 text-center w-full h-full">
                         <h1 className="text-white text-6xl font-bold">VICTORY</h1>
                         <div className="flex justify-center p-2">

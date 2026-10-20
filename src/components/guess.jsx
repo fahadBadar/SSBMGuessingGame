@@ -34,7 +34,7 @@ function Guess({randomCharacter, characterData}) {
     }
 
     return (
-        <div className="flex flex-col justify-item-center w-full h-full">
+        <div className="flex flex-col justify-item-center w-full h-full bg-[#212121]">
             <div className="flex justify-center text-gray-200 z-10">
                 {!isCorrect && <Dropdown
                     id = "characters"
