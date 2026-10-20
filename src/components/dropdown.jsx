@@ -58,7 +58,7 @@ function Dropdown({
                         type="button"
                         onClick={() => setIsOpen(!isOpen)}
                         className={
-                            'flex rounded-lg py-2 w-full px-4 hover:border-gray-200 border-1 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12' +
+                            'flex rounded-lg py-2 w-full px-4 hover:border-gray-200 border-1 p-2.5 bg-black hover:bg-gray-200 hover:text-black h-12 cursor-pointer' +
                             (style ? ` ${style}` : '')
                         }
                     >

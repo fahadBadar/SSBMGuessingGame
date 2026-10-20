@@ -46,7 +46,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                 stats += "\n";
             })
         }
-            <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full justify-center bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>
+            <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full justify-center bg-black hover:bg-gray-200 hover:text-black h-12 cursor-pointer"} onClick={handleCopy}>
                 <div className="flex items-center justify-center">
                     <IoCopyOutline />
                     <div className="px-1">
