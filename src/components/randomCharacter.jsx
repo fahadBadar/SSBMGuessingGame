@@ -15,7 +15,6 @@ function generateRandomCharacterIndex(today, characters){
     for (let i = 0; i <= today.length - 1; i++) {
         dateSeed += today.charCodeAt(i);
     }
-    console.log(dateSeed % characters.length);
     return dateSeed % characters.length;
 }
 

@@ -7,13 +7,12 @@ import Timer from "./timer.jsx";
 
 import '../App.css'
 
-function Guess({randomCharacter, characterNamesList, characterData}) {
+function Guess({randomCharacter, characterData}) {
     const [seconds, setSecond] = useSaveGameData("seconds",0);
     const [guess, setGuess] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [guessedCharacters, setGuessedCharacters] = useSaveGameData("guessedCharacters",[]);
     const [isCorrect, setIsCorrect] = useState(false);
-    console.log(JSON.stringify("sorted" + characterNamesList.sort(function(a, b) {return a.localeCompare(b)})));
 
     const availableCharacterData = characterData.filter(
         character => !guessedCharacters.includes(character.name)
@@ -52,9 +51,6 @@ function Guess({randomCharacter, characterNamesList, characterData}) {
             </div>
             <div className="flex justify-center text-gray-200">
                 <CheckGuess guess={guess} randomCharacter={randomCharacter} isSubmitted={isSubmitted} guessedCharacters={guessedCharacters} characterData={characterData} time={seconds} handleGuess={handleCorrectGuess}/>
-            </div>
-            <div>
-                answer: {randomCharacter}
             </div>
         </div>
     )

@@ -28,7 +28,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
             await navigator.clipboard.writeText(stats);
             setCopyButtonText("Copied!");
             setTimeout(() => { setCopyButtonText("Copy Stats"); }, 1000);
-            console.log('Stats copied to clipboard');
         } catch (err) {
             console.error('Failed to copy stats:', err);
         }
@@ -45,7 +44,6 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
                     stats += comparison.isMatch ? "🟩" : "🟥";
                 });
                 stats += "\n";
-                console.log(stats);
             })
         }
             <button className={"rounded-lg hover:border-gray-200 border-2 mt-10 w-full justify-center bg-black hover:bg-gray-200 hover:text-black h-12"} onClick={handleCopy}>
