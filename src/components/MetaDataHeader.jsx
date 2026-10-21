@@ -2,7 +2,7 @@ import {Component} from "react";
 const today = new Date();
 const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-const startDate = new Date("2026-09-05")
+const startDate = new Date("2026-10-20")
 const dateDifference = Math.abs(today - startDate)
 const dayDifference = Math.floor(dateDifference / (1000 * 60 * 60 * 24))
 
