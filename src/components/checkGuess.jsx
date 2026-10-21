@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {useSaveGameData} from "../hooks/useSaveGameData.jsx";
-import Statistics from "./Statistics";
+import Statistics from "./statistics";
 function CheckGuess({ guess, randomCharacter, isSubmitted, guessedCharacters, characterData, time, handleGuess}) {
     const [isCorrect, setIsCorrect] = useSaveGameData("isCorrect",false);
     const randomCharacterData = characterData.find(c => c.name === randomCharacter);
