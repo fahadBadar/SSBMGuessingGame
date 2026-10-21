@@ -12,7 +12,7 @@ function Statistics({characterData, guessedCharacters, randomCharacter, time}) {
             isMatch: characterInfo.universe === randomCharacterInfo.universe }
     ];
     const [copyButtonText, setCopyButtonText] = useState("Copy Stats");
-    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://url.placeholder\n";
+    let stats = "SSBMdle "+ getCurrentDate() +"\nTIME: "+time+"\nhttps://ssbmdle.vercel.app/\n";
 
     function getCurrentDate() {
         var today = new Date();
