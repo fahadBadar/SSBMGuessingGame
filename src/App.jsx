@@ -3,6 +3,7 @@ import RandomCharacter from "./components/randomCharacter.jsx";
 import {Footer} from "./components/footer.jsx"
 import {Header} from "./components/Header.jsx";
 import {MetaDataHeader} from "./components/MetaDataHeader.jsx";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <div className="flex-none">
                 <Footer/>
             </div>
+            <Analytics />
         </div>
 
     </>
